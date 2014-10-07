@@ -1,6 +1,7 @@
 
 function playerInit () {
 	player_position = { x : Math.floor(Math.random() * map_width), y : Math.floor(Math.random() * map_height) }
+    starting_position = JSON.parse(JSON.stringify(player_position));
 }
 
 document.addEventListener('keydown', function(event) {
@@ -23,4 +24,5 @@ document.addEventListener('keydown', function(event) {
     }
     console.info(player_position)
     renderMap();
+    detectCollisions();
 });

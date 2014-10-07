@@ -4,8 +4,6 @@ function start () {
 	playerInit();
 
 	generateBoard();
-	// generatePlayer();
 	renderMap();
-
 	screenStaticScroll();
 }

@@ -20,10 +20,14 @@ function generateBoard () {
 }
 
 function renderMap () {
+	// Set symbols
+	setOnMap (starting_position.y, starting_position.x, "H");
+	
 	render_data = [];
 	render_data = JSON.parse(JSON.stringify(board));
-
+	console.info(render_data[starting_position.y][starting_position.x])
 	render_data[player_position.y][player_position.x] = "@";
+
 	document.getElementById('game-area').innerHTML = "";
 	for (var i = 0; i < render_data.length; i++) {
 		var renderedRow = document.createElement("p");
@@ -34,4 +38,12 @@ function renderMap () {
 
 function setOnMap (y,x,symbol) {
 	board[y][x] = symbol;
+}
+
+function detectCollisions () {
+	if (player_position.x == starting_position.x && player_position.y == starting_position.y) {
+		notify ("home", ["exit"]);
+	} else if (player_position){
+
+	};
 }
