@@ -31,3 +31,7 @@ function renderMap () {
 		document.getElementById('game-area').appendChild(renderedRow);
 	};
 }
+
+function setOnMap (y,x,symbol) {
+	board[y][x] = symbol;
+}

@@ -1,6 +1,7 @@
 function screenStaticScroll () {
-	document.getElementById('screen-static').className = 'static';
 	document.getElementById('screen-static').className += ' vertTranslate';
-	console.info("trigger");
-	setTimeout(arguments.callee, 60000);
+	setTimeout(function () {
+		document.getElementById('screen-static').className = 'static';
+	}, 12000)
+	setTimeout(arguments.callee, 6000);
 }

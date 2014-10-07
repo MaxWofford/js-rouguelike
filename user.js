@@ -3,11 +3,8 @@ function playerInit () {
 	player_position = { x : Math.floor(Math.random() * map_width), y : Math.floor(Math.random() * map_height) }
 }
 
-// function generatePlayer () {
-// 	render_data[player_position.y][player_position.x] = "@";
-// }
-
 document.addEventListener('keydown', function(event) {
+    setOnMap (player_position.y, player_position.x, "_")
     if(event.keyCode == 37) {
         // move('left');
         player_position.x -= 1
