@@ -3,4 +3,19 @@ body {
 	background: #1B2827;
 	color: rgb(189, 222, 202);
 	font-size: 1.5em;
+	font-family: "Courier New", Courier, monospace;
+	text-shadow: #354E37 -2px 0px 0px, #76C17C -1px 0px 3px, #2D7531 1px 0px 4px;
+	line-height: 0.2em;
 }
+
+.static {
+	position: fixed;
+	width: 100%;
+	height: 25%;
+	top:-25%;
+}
+
+.static.vertTranslate {
+	transition: 12s linear;
+	top: 100%;
+} 
